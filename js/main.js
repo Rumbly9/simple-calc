@@ -25,6 +25,9 @@ const divd = document.querySelector("#divd")
 const equal = document.querySelector("#equal")
 const reset = document.querySelector("#reset")
 const ans = document.querySelector("#ans")
+const opBracket = document.querySelector("#opBracket")
+const clBracket = document.querySelector("#clBracket")
+const percent = document.querySelector("#percent")
 
 // This section is for the display-input-result variables-------------------------------------
 // ------------------------------------------------------------------------------
@@ -140,6 +143,21 @@ const clickDivd = divd.addEventListener("click", function(showDivd){
   formula.innerText += "÷";
   data.push("/");
 })
+const clickOpBracket = opBracket.addEventListener("click", function(showObrc){
+  input.value += "(";
+  formula.innerText += "(";
+  data.push("(");
+})
+const clickClBracket = clBracket.addEventListener("click", function(showClbrc){
+  input.value += ")";
+  formula.innerText += ")";
+  data.push(")");
+})
+const clickPercent = percent.addEventListener("click", function(showPerc){
+  input.value += "%";
+  formula.innerText += "%";
+  data.push("/100");
+})
 const clickEqual = equal.addEventListener("click", function(showEqual){
   result.innerText = eval(data.join(""));
   ansData.unshift(eval(data.join("")));
@@ -152,6 +170,7 @@ const clickAns = ans.addEventListener("click", function(showAns){
   formula.innerText += ansData[0];
   data.push(ansData[0]);
 })
+
 // This is function for Enter keypress event inside input------------------------
 // ------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------
