@@ -1,0 +1,156 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/*LAYOUT
+/*******************************************/
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 99.7vh;
+}
+.calcBody {
+  display: flex;
+  flex: 1;
+  max-width: 600px;
+  height: 600px;
+  flex-direction: column;
+}
+#display {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  margin: 20px;
+}
+#formula {
+  flex: 1;
+  text-align: right;
+  font-size: 30px;
+}
+#inputs {
+  flex: 1;
+  border: none;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-radius: 0;
+}
+#result {
+  flex: 1;
+  text-align: right;
+  font-size: 30px;
+}
+.bottom {
+  display: flex;
+  flex: 2;
+  height: 300px;
+  flex-direction: row;
+}
+#digits {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.order {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.extra > .wrap1{
+  flex: 1;
+  display: flex;
+  /* flex-wrap: nowrap; */
+  /* max-width: 67%; */
+  flex-direction: row;
+}
+.extra > .wrap2{
+  flex: 1;
+  display: flex;
+  /* flex-wrap: nowrap; */
+  /* max-width: 40%; */
+  flex-direction: row;
+}
+.num {
+  flex: 1;
+  display: flex;
+  height: 50px;
+  width: 80px;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+#operators {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.ope {
+  flex: 1;
+  display: flex;
+  width: 70px;
+  height: 75px;
+  margin: 10px 5px;
+  align-items: center;
+  justify-content: center;
+}
+.num > span, .ope > span {
+  flex: 1;
+}
+/******************************************
+/*STYLE
+/*******************************************/
+body {
+  background: rgba(82, 44, 4, 1);
+}
+.calcBody, .calcBody * {
+  border-radius: 10px;
+}
+.calcBody{
+  background: rgba(0,0,0,1);
+}
+#display{
+  background: rgba(255,255,255,1);
+}
+#result {
+  background: url(../636px-OCR-A_char_Equals_Sign.svg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+input {
+  font-size: 30px;
+}
+.bottom {
+  text-align: center;
+  font-size: 30px;
+}
+.num, .ope {
+  background: rgba(255,255,255,1);
+  cursor: pointer;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+* {
+  /* border: 1px solid red !important; */
+}
