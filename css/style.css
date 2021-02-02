@@ -63,6 +63,13 @@ body{
   height: 300px;
   flex-direction: row;
 }
+#extraOpe{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
 #digits {
   flex: 5;
   display: flex;
@@ -151,6 +158,6 @@ input {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
-* {
-  /* border: 1px solid red !important; */
-}
+/* * {
+  border: 1px solid red !important;
+} */
